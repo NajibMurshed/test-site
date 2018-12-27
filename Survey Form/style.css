@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
 body{
-  //font-size: 16px;
+  /* font-size: 16px; */
   font-family: 'Raleway' , Helvetica, sans-serif;
   text-align: center;
   background-color: #a9d7d1;
 }
 
-.heading{
+.title{
   font-size: 32px;
 }
 
@@ -16,6 +16,7 @@ body{
   background-color: white;
   margin: 0 auto;
   max-width: 900px;
+  padding: 20px;
 }
 
 
@@ -24,60 +25,125 @@ body{
   padding: 10px;
 }
 
-#main{
+#survey-form{
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-gap: 20px; /* defines margin around grid items, super convenient for creating space among items */
 }
 
-input[type="text"]{
+
+
+input[type="text"] {
   height: 25px;
   width: 200px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
-input[type="email"]{
+input[type="email"] {
   height: 25px;
   width: 200px;
-  margin-bottom: 20px;
 }
+input[type="number"] {
+  height: 25px;
+  width: 200px;
+}
+/* input[type="email"]{
+  height: 25px;
+  width: 200px;
+} */
 
 .f{
-  display: grid;
-  justify-items: end;
-  margin-right: 20px;
+  /* display: grid; */
+  margin-left: 20px;
+  text-align: right;
+  /* margin-right: 20px; */
 }
-.space{
+
+.f1{
+  display:grid;
+  align-self: center;
+  justify-self: end;
+}
+/* .space{
   margin: 20px 0px;
-}
+} */
 .compress{
   height: 30px;
   width: 150px;
-  margin-top: 15px;
+  /* margin-top: 15px; */
 }
 
-.c{
+/* .c{
   width: 80%;
   text-align: right;
-
-}
+} */
 
 .left-just{
-  display: grid;
-  justify-items: start;
-  padding-right: 5px;
+  /* display: grid;
+  justify-items: start; */
+  /* padding-right: 5px; */
+  /* grid-gap: 10px; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
-.space1{
+.left-just *:not(:last-child) {
+  margin-bottom: 10px;
+}
+/* .space1{
   margin-bottom: 20px;
 }
 .c1{
   width: 50%;
+} */
+
+.button-container {
+  grid-column: 1 / 3;
+  display: flex;
+  justify-content: center;
 }
 
+button {
+  height: 37px;
+  width: 92px;
+  font-size: 16px;
+  background: #59ace0;
+  color: white;
+  border-style: none;
+  border-radius: 4px;
+}
 
+@media screen and (max-width:500px) {
 
-.cen{
+  #survey-form{
   display: flex;
-  justify-content: flex-end;
-
-  margin: 20px 0px;
-
+  flex-direction: column;
+  }
+  .f1{
+    display: flex;
+    align-self: flex-start;
+  }
+  input[type="text"]{
+    margin: 10px 0;
+  }
+  input[type="email"]{
+    margin: 10px 0;
+  }
+  input[type="number"] {
+    margin: 10px 0;
+  }
+  .f{
+    display:flex;
+    align-self: flex-start;
+    margin: 0px;
+    text-align: left;
+  }
+  .compress{
+    margin: 10px 0;
+  }
+  .left-just{
+    margin: 10px 0;
+  }
+  .c1{
+    margin: 10px 0;
+  }
 }

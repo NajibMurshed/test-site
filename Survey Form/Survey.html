@@ -2,8 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="Free Web tutorials">
-    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="description" content="Survey Form">
+    <meta name="keywords" content="Responsive Web Projects">
     <meta name="author" content="Md Najib Murshed">
     <meta name="viewport" content="width=device-width, initial-   scale=1.0">
     <link rel="stylesheet" href="./style.css">
@@ -11,114 +11,116 @@
   </head>
   <body>
     <section id="full-page">
-      <h1 class="heading">Survey Form</h1>
+      <h1 class="title">Survey Form</h1>
       <div class="container">
-        <p>
+        <p id="descripton">
           Let us know how we can improve freeCodeCamp.
         </p>
-        <form id="main">
+        <form id="survey-form">
           <!--<div class="r check">-->
-            <label class="f" for="Name">*Name:</label>
-            <input type="text" name="Name" placeholder="Enter your name">
+            <label class="f1" id="name-label" for="Name">*Name:</label>
+            <input type="text" id="name" name="Name" placeholder="Enter your name">
           <!--</div>-->
           <!--<div class="r check">-->
-            <label class= "f" for="Email">*Email:</label>
-            <input type="email" name="Email" placeholder="Enter your email">
+            <label class= "f1" id="email-label" for="Email">*Email:</label>
+            <input type="email" id="email" name="Email" placeholder="Enter your email">
           <!--</div>-->
           <!--<div class="r check">-->
-            <label class="f" for="Age">Age:</label>
-            <input type="text" name="Age" placeholder="Enter your age">
+            <label class="f1" id="number-label" for="Age">Age:</label>
+            <input type="number" id="number" name="Age" placeholder="Enter your age" min="1" max="120">
             <!--</div>-->
             <!--<div class="r check">-->
-            <label class="space c" for="role">Which of this best describes your role?</label>
-            <select class="compress" name="best role">
-  <option value="select" disabled>Select an option</option>
-  <option value="student">Student</option>
-  <option value="full job">Full Time Job</option>
-  <option value="full learner">Full Time Learner</option>
-  <option value="prefer">Prefer not to say</option>
-  <option value="other">Other</option>
-</select>
+            <label class="f" for="role">Which of this best describes your role?</label>
+            <select class="compress" id="dropdown" name="best role">
+              <option value="select" disabled>Select an option</option>
+              <option value="student">Student</option>
+              <option value="full job">Full Time Job</option>
+              <option value="full learner">Full Time Learner</option>
+              <option value="prefer">Prefer not to say</option>
+              <option value="other">Other</option>
+            </select>
           <!--</div>-->
           <!--<div class="r check">-->
-            <label for="likely" class="c">*How likely is that you would recommend freeCodeCamp to a friend?</label>
+            <label for="likely" class="f">*How likely is that you would recommend freeCodeCamp to a friend?</label>
               <div class="left-just">
                 <div>
-                  <input type="radio" name="likely" value="definitely"> Definitely
+                  <input type="radio" name="likely" id="definitely" value="definitely"/>
+                  <label for="definitely">Definitely</label>
                 </div>
                 <div>
-                  <input type="radio" name="likely" value="maybe"> Maybe
+                  <input type="radio" name="likely" id="maybe" value="maybe"/>
+                  <label for="maybe">Maybe</label>
                 </div>
                 <div>
-                  <input type="radio" name="likely" value="not sure"> Not Sure
+                  <input type="radio" name="likely" id="not sure" value="not sure"/>
+                  <label for="not sure">Not Sure</label>
                 </div>
               </div>
 
 
           <!--</div>-->
           <!--<div class="r check">-->
-            <label for="like" class="space c">
+            <label for="like" class="f">
               What do you like most in FCC:
             </label>
-            <select class="compress" name="likebest">
-  <option value="select" disabled>Select an option</option>
-  <option value="challenges">Challenges</option>
-  <option value="projects">Projects</option>
-  <option value="community">Community</option>
-  <option value="open source">Open Source</option>
-</select>
+            <select class="compress" id="dropdown" name="likebest">
+              <option value="select" disabled>Select an option</option>
+              <option value="challenges">Challenges</option>
+              <option value="projects">Projects</option>
+              <option value="community">Community</option>
+              <option value="open source">Open Source</option>
+            </select>
           <!--</div>-->
           <!--<div class="r check">-->
-          <label for="improved" class="space1 c">Things that should be improved in the future(Check all that apply):</label>
+          <label for="improved" class="f">Things that should be improved in the future(Check all that apply):</label>
           <div class="left-just">
             <div class="">
               <input type="checkbox" name="improved" value="Front-end Projects"> Front-end Projects
             </div>
             <div>
-              <input type="checkbox" name="improved" value="Front-end Projects"> Back-end Projects
+              <input type="checkbox" name="improved" value="Back-end Projects"> Back-end Projects
             </div>
              <div>
-               <input type="checkbox" name="improved" value="Front-end Projects"> Data Visualization
+               <input type="checkbox" name="improved" value="Data Visualization"> Data Visualization
              </div>
              <div>
-               <input type="checkbox" name="improved" value="Front-end Projects"> Challenges
+               <input type="checkbox" name="improved" value="Challenges"> Challenges
              </div>
               <div>
-                <input type="checkbox" name="improved" value="Front-end Projects"> Open Source Community
+                <input type="checkbox" name="improved" value="Open Source Community"> Open Source Community
               </div>
               <div>
-                <input type="checkbox" name="improved" value="Front-end Projects"> Glitter help rooms
+                <input type="checkbox" name="improved" value="Glitter help rooms"> Glitter help rooms
               </div>
               <div>
-                <input type="checkbox" name="improved" value="Front-end Projects"> Videos
+                <input type="checkbox" name="improved" value="Videos"> Videos
               </div>
               <div>
-                <input type="checkbox" name="improved" value="Front-end Projects"> City Meetups
+                <input type="checkbox" name="improved" value="City Meetups"> City Meetups
               </div>
               <div>
-                <input type="checkbox" name="improved" value="Front-end Projects"> Wiki
+                <input type="checkbox" name="improved" value="Wiki"> Wiki
               </div>
               <div>
-                <input type="checkbox" name="improved" value="Front-end Projects"> Forum
+                <input type="checkbox" name="improved" value="Forum"> Forum
               </div>
               <div>
-                <input type="checkbox" name="improved" value="Front-end Projects"> Additional Courses
+                <input type="checkbox" name="improved" value="Additional Courses"> Additional Courses
               </div>
 
           </div>
 
           <!--</div>-->
           <!--<div class="r check">-->
-            <label class="space c">Any Comments or Suggestions?</label>
+            <label class="f">Any Comments or Suggestions?</label>
             <textarea class="c1" rows="3" cols="30" placeholder="Enter your comment here..."></textarea>
 
             </textarea>
           <!--</div>-->
           <!--<div class="r check">-->
-          <div class="cen">
-            <button type="submit">Submit</button>
+          <div class="button-container">
+            <button type="submit" id="submit">Submit</button>
           </div>
-
           <!--</div>-->
         </form>
       </div>
